@@ -27,6 +27,7 @@ public class TestIssue1463 {
     public void testIssue1463() {
         String str = doubleDeserialization(wenshao);
         try {
+            System.out.println(str);
             wenshao = JSON.parseObject(str, Person.class);
         } catch (Throwable ex) {
             Assert.assertEquals(ex.getCause() instanceof NullPointerException, false);
